@@ -77,6 +77,11 @@
 .module-location .location-title.rating-positive::before {
   background-color: #5be225;
 }
+
+.module-location .location-title.rating-positive.Poids::before {
+  background-color: #1bada2;
+}
+
 .module-location .location-title.rating-positive::after {
   background-image: -moz-linear-gradient(#5be225, rgba(91, 226, 37, 0));
   background-image: -webkit-linear-gradient(#5be225, rgba(91, 226, 37, 0));
@@ -90,6 +95,16 @@
   background-image: -webkit-linear-gradient(#ff3927, rgba(255, 57, 39, 0));
   background-image: linear-gradient(#ff3927, rgba(255, 57, 39, 0));
 }
+
+.module-location .location-title.rating-negative.Vaccin::before {
+  background-color: blue;
+}
+.module-location .location-title.rating-negative.Vaccin::after {
+  background-image: -moz-linear-gradient(#ffb356, rgba(255, 57, 39, 0));
+  background-image: -webkit-linear-gradient(blue, rgba(255, 57, 39, 0));
+  background-image: linear-gradient(blue, rgba(255, 57, 39, 0));
+}
+
 .module-location .location-title::before {
   border-radius: 50%;
   bottom: 45px;
@@ -147,6 +162,19 @@
 .module-history li.rating-negative i {
   background-color: #ff3927;
 }
+
+.module-history li.rating-negative.Vaccin i {
+  background-color: #ffb356;
+}
+
+.module-history li.rating-negative.Poids i {
+  background-color: #1bada2;
+}
+
+.module-history li.rating-negative.Taille i {
+  background-color: #B35CB3;
+}
+
 .module-history li.rating-negative i::before {
   background-image: -moz-linear-gradient(#ff3927, #ff3927);
   background-image: -webkit-linear-gradient(#ff3927, #ff3927);
