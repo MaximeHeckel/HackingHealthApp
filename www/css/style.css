@@ -373,12 +373,13 @@ ion-side-menu i {
 }
 
 .button-float {
-  background: #529AD6 !important;
+  background: #66D2B8 !important;
   color: white !important;
+  height: 52px;
   z-index: 12 !important;
   position: absolute !important;
-  bottom: 10px !important;
-  right: 10px !important;
+  bottom: 20px;
+  right: 20px !important;
   border-radius: 50% !important;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26) !important;
   -webkit-transform: translate3d(0, 0, 0) !important;
