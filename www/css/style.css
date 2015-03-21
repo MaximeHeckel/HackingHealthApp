@@ -96,6 +96,7 @@
 
 .module-location .location-title::before {
   border-radius: 50%;
+  border: 3px solid white;
   bottom: 45px;
   content: '';
   display: block;
@@ -213,7 +214,7 @@
 .module-history time {
   color: #a6a6a6;
   display: block;
-  font-size: 0.625em;
+  font-size: 1.0em;
   text-transform: uppercase;
 }
 .module-history i {
@@ -237,7 +238,7 @@
   content: '';
   display: block;
   height: 40px;
-  left: 5px;
+  left: 9px;
   position: absolute;
   width: 5px;
   z-index: -1;
@@ -255,13 +256,45 @@ html {
   text-rendering: optimizeLegibility;
 }
 
+a{
+  text-decoration: none;
+}
+
 .wrapper {
   background-color: white;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   margin: 0 auto;
 }
 
+h4.bold-last-element{
+  color: #41D2BA;
+}
+
+h4.bold-last-element span{
+  color: #A7A1A1;
+  font-size: 14px;
+  padding-left: 8px;
+}
+
+h5.history-title{
+  color: #A7A1A1;
+  padding-left: 15px;
+}
+
+.grey-date{
+  color: #A7A1A1;
+  font-weight: 500;
+}
+
 /*IONIC EDIT*/
+
+.row{
+  padding: 0;
+}
+
+.item-divider{
+  text-align: center;
+}
 
 .bar{
   background-color: #ffffff;
@@ -277,7 +310,6 @@ ion-side-menu i {
 }
 
 .dashblock {
-  margin: 5px;
 }
 
 .col {
@@ -287,17 +319,18 @@ ion-side-menu i {
 
 .dashblock.vaccins {
   background: #fff5cf;
-  border: 1px solid #ffb356;
   color: #ffb356;
 }
 
 .dashblock.vaccins h2 {
   color: #ffb356;
+  margin: 0 0;
 }
 
 .dashblock.weight {
+  margin-top: 20px;
   background: #d1eeec;
-  border: 1px solid #1bada2;
+  margin: 15px 5px;
 }
 
 .dashblock.weight h1,.dashblock.weight h5 {
@@ -312,9 +345,10 @@ ion-side-menu i {
 }
 
 .dashblock.length {
+  margin-top: 20px;
   background: #efdeef;
-  border: 1px solid #b35cb3;
-} 
+  margin: 15px 5px;
+}
 
 .dashblock.length h1, .dashblock.length h5 {
   color: #b35cb3;
