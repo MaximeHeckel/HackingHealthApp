@@ -265,6 +265,10 @@ html {
   text-rendering: optimizeLegibility;
 }
 
+a{
+  text-decoration: none;
+}
+
 .wrapper {
   background-color: white;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
@@ -293,6 +297,10 @@ h5.history-title{
 
 /*IONIC EDIT*/
 
+.row{
+  padding: 0;
+}
+
 .bar{
   background-color: #ffffff;
   border-width: 0px;
@@ -307,7 +315,6 @@ ion-side-menu i {
 }
 
 .dashblock {
-  margin: 5px;
 }
 
 .col {
@@ -317,17 +324,18 @@ ion-side-menu i {
 
 .dashblock.vaccins {
   background: #fff5cf;
-  border: 1px solid #ffb356;
   color: #ffb356;
 }
 
 .dashblock.vaccins h2 {
   color: #ffb356;
+  margin: 0 0;
 }
 
 .dashblock.weight {
+  margin-top: 20px;
   background: #d1eeec;
-  border: 1px solid #1bada2;
+  margin: 15px 5px;
 }
 
 .dashblock.weight h1,.dashblock.weight h5 {
@@ -342,9 +350,10 @@ ion-side-menu i {
 }
 
 .dashblock.length {
+  margin-top: 20px;
   background: #efdeef;
-  border: 1px solid #b35cb3;
-} 
+  margin: 15px 5px;
+}
 
 .dashblock.length h1, .dashblock.length h5 {
   color: #b35cb3;
