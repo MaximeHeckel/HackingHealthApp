@@ -16,7 +16,7 @@ angular.module('starter.services', [])
       id: 0,
       type: 'Poids',
       value: '3.55kg',
-      date: new Date("October 13, 2014")
+      date: new Date("October 11, 2014")
     },
     {
       id: 1,
@@ -34,13 +34,19 @@ angular.module('starter.services', [])
       id: 3,
       type: 'Vaccin',
       value: 'Rougeole',
-      date: new Date("October 11, 2014")
+      date: new Date("October 13, 2014")
     },
     {
       id: 4,
       type: 'Nutrition',
       value: 'Lait maternel',
-      date: new Date("October 11, 2014")
+      date: new Date("October 13, 2014")
+    },
+    {
+      id: 5,
+      type: 'Poids',
+      value: '3.57kg',
+      date: new Date("October 14, 2014")
     },
   ];
 
