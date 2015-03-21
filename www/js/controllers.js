@@ -4,11 +4,7 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('VaccinsCtrl', function($scope, vaccinsData){
-
-})
-
-.controller('HomeCtrl', function($scope, $ionicModal, homeData){
+.controller('VaccinsCtrl', function($scope, $ionicModal, vaccinsData){
   $ionicModal.fromTemplateUrl('templates/modals/alert-doctor.html', {
     scope: $scope,
     animation: 'slide-in-up'
@@ -33,6 +29,14 @@ angular.module('starter.controllers', [])
   $scope.$on('modal.removed', function() {
     // Execute action
   });
+
+  console.log(vaccinsData.all());
+  $scope.data = vaccinsData.all();
+
+})
+
+.controller('HomeCtrl', function($scope, homeData){
+  
 })
 
 .controller('TimelineCtrl', function($scope, timelineData){
