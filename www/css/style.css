@@ -301,6 +301,10 @@ h5.history-title{
   padding: 0;
 }
 
+.item-divider{
+  text-align: center;
+}
+
 .bar{
   background-color: #ffffff;
   border-width: 0px;
