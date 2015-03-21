@@ -5,7 +5,8 @@ angular.module('starter.controllers', [])
 })
 
 .controller('TimelineCtrl', function($scope, timelineData){
-
+  console.log(timelineData.all());
+  $scope.data = timelineData.all();
 })
 
 .controller('MorphoCtrl', function($scope, morphoData){
