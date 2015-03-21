@@ -44,7 +44,7 @@ angular.module('starter', ['ionic', 'angles', 'starter.controllers','starter.ser
       url: "/nutrition",
       views: {
         'menuContent': {
-          templateUrl: "templates/nutrition.html"
+          templateUrl: "templates/home.html"
         }
       }
     })
