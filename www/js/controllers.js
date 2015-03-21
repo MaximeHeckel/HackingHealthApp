@@ -5,6 +5,11 @@ angular.module('starter.controllers', [])
 })
 
 .controller('VaccinsCtrl', function($scope, $ionicModal, vaccinsData){
+
+})
+
+.controller('HomeCtrl', function($scope, $ionicModal, $window, homeData,   $ionicPlatform, $cordovaLocalNotification){
+
   $ionicModal.fromTemplateUrl('templates/modals/alert-doctor.html', {
     scope: $scope,
     animation: 'slide-in-up'
@@ -36,7 +41,28 @@ angular.module('starter.controllers', [])
 })
 
 .controller('HomeCtrl', function($scope, homeData){
-  
+
+  $scope.add = function() {
+        var alarmTime = new Date();
+        alarmTime.setMinutes(alarmTime.getMinutes() + 1);
+        $cordovaLocalNotification.add({
+            id: "1",
+            date: alarmTime,
+            message: " Nicole doit se faire vacciner dans 15 jours",
+            title: "Alerte Vaccin",
+            autoCancel: true,
+            sound: null
+        }).then(function () {
+            console.log("The notification has been set");
+        });
+    };
+
+    $scope.isScheduled = function() {
+        $cordovaLocalNotification.isScheduled("1").then(function(isScheduled) {
+            alert("Notification 1 Scheduled: " + isScheduled);
+        });
+    }
+
 })
 
 .controller('TimelineCtrl', function($scope, timelineData){
@@ -44,8 +70,9 @@ angular.module('starter.controllers', [])
   $scope.data = timelineData.all();
 })
 
-.controller('MorphoCtrl', function($scope, morphoData, $ionicSlideBoxDelegate){
+.controller('MorphoCtrl', function($scope, morphoData, $ionicSlideBoxDelegate, $ionicModal, $ionicPopup){
   $scope.data = morphoData.all();
+  $scope.dataWeight = {};
 
   $scope.weightSlide = function() {
     $ionicSlideBoxDelegate.slide(0);
@@ -72,9 +99,6 @@ angular.module('starter.controllers', [])
     datasetStrokeWidth : 1,
   }
 
-
-
-
   $scope.chart = {
     labels : legendData,
     datasets : [
@@ -99,7 +123,53 @@ angular.module('starter.controllers', [])
             data : [3.717,3.887,4.053,4.225,4.383,4.539,4.692,4.692,4.613]
         }
     ]
-};
+  };
+
+  $ionicModal.fromTemplateUrl('my-modal.html', {
+    scope: $scope,
+    animation: 'slide-in-up'
+  }).then(function(modal) {
+    $scope.modal = modal;
+  });
+  $scope.openModal = function() {
+    $scope.modal.show();
+  };
+  $scope.closeModal = function() {
+    $scope.modal.hide();
+  };
+  //Cleanup the modal when we're done with it!
+  $scope.$on('$destroy', function() {
+    $scope.modal.remove();
+  });
+  // Execute action on hide modal
+  $scope.$on('modal.hidden', function() {
+    // Execute action
+  });
+  // Execute action on remove modal
+  $scope.$on('modal.removed', function() {
+    // Execute action
+  });
+
+  $scope.newData = function() {
+    var weight = this.dataWeight.weight/1000;
+    $scope.chart.datasets[3].data.push(weight);
+    var dataToPush = {
+      weight: weight,
+      date: this.dataWeight.date
+    };
+    $scope.data.push(dataToPush);
+    $scope.modal.hide();
+
+    setTimeout(function() {
+      var alertPopup = $ionicPopup.alert({
+        title: 'Attention !',
+        template: 'The weight value is outside the average rage and may affect the health of your baby.<br /> Please visit a doctor! <div class="list card"><a href="#/home" class="item item-icon-left"><i class="icon ion-ios-telephone"></i>Appeler le pédiatre</a><a href="#/home" class="item item-icon-left"><i class="icon ion-location"></i>Médecins autour de moi</a><a href="#/home" class="item item-icon-left"><i class="icon ion-calendar"></i>Créer un rappel</a></div>'
+      });
+      alertPopup.then(function(res) {
+        console.log('HHCamp Rocks !');
+      });
+    }, 2000);
+  };
 })
 
 .controller('PlaylistsCtrl', function($scope) {
