@@ -9,14 +9,14 @@
     <ion-slide>
         <div class="row">
           <div class="col">
-            <h4 class="bold-last-element">{{data[data.length-1].weight}}kg <span>{{data[data.length-1].date | date: 'dd/MM/yyyy'}}</h4>
+            <h4 class="bold-last-element">{{data[data.length-1].weight}} kg <span>mesuré le {{data[data.length-1].date | date: 'dd/MM/yyyy'}}</h4>
             <canvas chart="Line" legend="true" options="options" data="chart"></canvas>
           </div>
         </div>
         <h5 class="history-title">HISTORIQUE</h5>
         <ion-list>
           <ion-item ng-repeat="item in data | orderBy:'id':true" ng-show="$index > 0">
-            {{item.weight}}kg – <span class="grey-date">{{item.date | date:'dd/MM/yyyy'}}</span>
+            {{item.weight}} kg – <span class="grey-date">le {{item.date | date:'dd/MM/yyyy'}}</span>
           </ion-item>
         </ion-list>
     </ion-slide>
