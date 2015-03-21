@@ -1,5 +1,15 @@
 angular.module('starter.services', [])
 
+.factory('vaccinsData', function(){
+  var vaccinsData = [];
+
+  return{
+    all: function(){
+      return timelineData;
+    }
+  }
+})
+
 .factory('timelineData', function(){
   var timelineData = [
     {

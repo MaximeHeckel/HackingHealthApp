@@ -57,6 +57,16 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services'])
       }
     })
 
+    .state('app.vaccins', {
+      url: "/vaccins",
+      views: {
+        'menuContent': {
+          templateUrl: "templates/vaccins.html",
+          controller: 'VaccinsCtrl'
+        }
+      }
+    })
+
     .state('app.timeline', {
       url: "/timeline",
       views: {

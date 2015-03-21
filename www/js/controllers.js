@@ -4,6 +4,10 @@ angular.module('starter.controllers', [])
 
 })
 
+.controller('VaccinsCtrl', function($scope, vaccinsData){
+
+})
+
 .controller('TimelineCtrl', function($scope, timelineData){
   console.log(timelineData.all());
   $scope.data = timelineData.all();
