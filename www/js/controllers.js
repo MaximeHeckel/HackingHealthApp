@@ -106,7 +106,7 @@ angular.module('starter.controllers', [])
     ]
   };
 
-  $ionicModal.fromTemplateUrl('my-modal.html', {
+  $ionicModal.fromTemplateUrl('templates/modals/modalMesure.html', {
     scope: $scope,
     animation: 'slide-in-up'
   }).then(function(modal) {
