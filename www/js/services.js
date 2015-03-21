@@ -84,4 +84,17 @@ angular.module('starter.services', [])
         return morphoData;
       }
     }
-});
+})
+
+.factory('homeData', function(){
+  var homeData = [];
+
+  return{
+    all: function(){
+      return homeData;
+    }
+  }
+})
+;
+
+

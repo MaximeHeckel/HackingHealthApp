@@ -301,3 +301,69 @@ h5.history-title{
 .bar.bar-stable{
   border-width: 0px;
 }
+
+ion-side-menu i {
+  margin-right: 15px;
+}
+
+.dashblock {
+  margin: 5px;
+}
+
+.col {
+  padding: 15px;
+  position: relative;
+}
+
+.dashblock.vaccins {
+  background: #fff5cf;
+  border: 1px solid #ffb356;
+  color: #ffb356;
+}
+
+.dashblock.vaccins h2 {
+  color: #ffb356;
+}
+
+.dashblock.weight {
+  background: #d1eeec;
+  border: 1px solid #1bada2;
+}
+
+.dashblock.weight h1,.dashblock.weight h5 {
+  color: #1bada2;
+}
+.dashblock h5 {
+  position: absolute;
+  top:10px;
+  right:10px;
+  margin-top: 0;
+  text-align: right;
+}
+
+.dashblock.length {
+  background: #efdeef;
+  border: 1px solid #b35cb3;
+} 
+
+.dashblock.length h1, .dashblock.length h5 {
+  color: #b35cb3;
+}
+
+.dashblock.chart {
+  border: 1px solid #a3ae3a;
+  background: #ededed;
+}
+
+.center {
+  text-align: center;
+}
+
+.icon-big {
+  font-size: 50px;
+}
+
+.pull-left {
+  float: left;
+  margin-right: 20px;
+}
