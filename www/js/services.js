@@ -1,7 +1,9 @@
 angular.module('starter.services', [])
 
 .factory('timelineData', function(){
-  var timelineData = [];
+  var timelineData = [
+    
+  ];
 
   return{
     all: function(){
