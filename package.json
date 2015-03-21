@@ -1,7 +1,7 @@
 {
   "name": "bbsante",
   "version": "1.0.0",
-  "description": "BBsante: An Ionic project",
+  "description": "BBSante: An Ionic project",
   "dependencies": {
     "gulp": "^3.5.6",
     "gulp-sass": "^0.7.1",
