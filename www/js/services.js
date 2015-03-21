@@ -1,11 +1,43 @@
 angular.module('starter.services', [])
 
 .factory('vaccinsData', function(){
-  var vaccinsData = [];
+  var vaccinsData = [
+    {
+      id: 5,
+      type: 'ok',
+      value: 'BCG',
+      date: new Date("October 14, 2014")
+    },
+    {
+      id: 4,
+      type: 'todo',
+      value: 'Diphtérie-Tétanos-Poliomyélite'
+    },
+    {
+      id: 3,
+      type: 'todo',
+      value: 'Coqueluche'
+    },
+    {
+      id: 2,
+      type: 'todo',
+      value: 'Haemophilus Influenza de type b (HIB)'
+    },
+    {
+      id: 1,
+      type: 'later',
+      value: 'Hépatite B'
+    },
+    {
+      id: 0,
+      type: 'later',
+      value: 'Pneumocoque C'
+    },
+  ];
 
   return{
     all: function(){
-      return timelineData;
+      return vaccinsData;
     }
   }
 })

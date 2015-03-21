@@ -1,21 +1,10 @@
 .module-location {
-  background-color: #C949B6;
-  background-position: center center;
-  background-size: cover;
-  color: white;
-  height: 140px;
+  background-color: transparent;
+  border-bottom: 2px solid #00a1de;
+  height: 100px;
   position: relative;
 }
-.module-location::before {
-  background-color: rgba(0, 0, 0, 0.4);
-  bottom: 0;
-  content: '';
-  display: block;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
+
 .module-location .location-quickstats {
   background-image: -moz-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
   background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
@@ -67,7 +56,7 @@
 .module-location .location-title {
   bottom: 0;
   left: 0;
-  padding: 0 50px 25px 50px;
+  padding: 0 50px 40px 50px;
   position: absolute;
   right: 0;
   background-image: -moz-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
@@ -75,17 +64,17 @@
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
 }
 .module-location .location-title.rating-positive::before {
-  background-color: #5be225;
+  background-color: #6c6c6c;
 }
 
 .module-location .location-title.rating-positive.Poids::before {
-  background-color: #1bada2;
+  background-color: #6c6c6c;
 }
 
 .module-location .location-title.rating-positive::after {
-  background-image: -moz-linear-gradient(#ff3927,#ff3927);
-  background-image: -webkit-linear-gradient(#ff3927,#ff3927);
-  background-image: linear-gradient(#ff3927,#ff3927);
+  background-image: -moz-linear-gradient(#979797, #979797);
+  background-image: -webkit-linear-gradient(#979797, #979797);
+  background-image: linear-gradient(#979797, #979797);
 }
 .module-location .location-title.rating-negative::before {
   background-color: #ff3927;
@@ -111,28 +100,30 @@
   bottom: 45px;
   content: '';
   display: block;
-  left: 16px;
-  height: 20px;
+  left: 23px;
+  height: 15px;
   position: absolute;
-  width: 20px;
+  width: 15px;
+    border: 2px solid #fff;
+  box-shadow: 0px 0px 3px #aaa;
+  -webkit-box-shadow: 0px 2px 3px #666;
+  -moz-box-shadow: 0px 2px 3px #666;
 }
 .module-location .location-title::after {
   bottom: -28px;
   content: '';
   display: block;
   height: 73px;
-  left: 25px;
+  left: 28px;
   position: absolute;
-  width: 2px;
+  width: 5px;
 }
 .module-location .location-title h2 {
   font-size: 1.125em;
   font-weight: 400;
   margin: 0;
-  color: #FFFFFF;
 }
 .module-location .location-title time {
-  color: rgba(255, 255, 255, 0.8);
   display: block;
   font-size: 1.1125em;
 }
@@ -140,7 +131,7 @@
 .module-history {
   list-style: none;
   margin: 0;
-  padding: 15px 0;
+  padding: 4px 0;
 }
 .module-history li {
   margin-bottom: 1px;
@@ -160,26 +151,22 @@
   background-image: -webkit-linear-gradient(#5be225, rgba(91, 226, 37, 0));
   background-image: linear-gradient(#5be225, rgba(91, 226, 37, 0));
 }
-.module-history li.rating-negative i {
-  background-color: #ff3927;
+.module-history li.rating-negative.ok i {
+  background: url("../img/check.jpg") center center no-repeat #6bb324;
 }
 
-.module-history li.rating-negative.Vaccin i {
+.module-history li.rating-negative.todo i {
   background-color: #ffb356;
 }
 
-.module-history li.rating-negative.Poids i {
-  background-color: #1bada2;
-}
-
-.module-history li.rating-negative.Taille i {
-  background-color: #B35CB3;
+.module-history li.rating-negative.later i {
+  background-color: #dcdcdc;
 }
 
 .module-history li.rating-negative i::before {
-  background-image: -moz-linear-gradient(#ff3927, #ff3927);
-  background-image: -webkit-linear-gradient(#ff3927, #ff3927);
-  background-image: linear-gradient(#ff3927, #ff3927);
+  background-image: -moz-linear-gradient(#979797, #979797);
+  background-image: -webkit-linear-gradient(#979797, #979797);
+  background-image: linear-gradient(#979797, #979797);
 }
 .module-history li.rating-negative i::after {
   background-image: -moz-linear-gradient(#ff3927, rgba(255, 57, 39, 0));
@@ -206,8 +193,8 @@
   bottom: -35px;
 }
 .module-history li:last-child i::before {
-  height: 66px;
-  top: -66px;
+  height: 21px;
+  top: -24px;
 }
 .module-history li:last-child i::after {
   display: none;
@@ -236,12 +223,16 @@
   color: transparent;
   display: block;
   font-size: 0;
-  height: 20px;
-  left: 16px;
+  height: 22px;
+  left: 20px;
   position: absolute;
-  top: 15px;
-  width: 20px;
-  z-index: 2;
+  top: 5px;
+  width: 22px;
+  z-index: 9;
+  border: 3px solid #fff;
+  box-shadow: 0px 0px 3px #aaa;
+  -webkit-box-shadow: 0px 2px 3px #666;
+  -moz-box-shadow: 0px 2px 3px #666;
 }
 .module-history i::before, .module-history i::after {
   content: '';
@@ -249,7 +240,7 @@
   height: 40px;
   left: 9px;
   position: absolute;
-  width: 2px;
+  width: 5px;
   z-index: -1;
 }
 .module-history i::before {
@@ -299,6 +290,10 @@ h5.history-title{
 
 .row{
   padding: 0;
+}
+
+.item-divider{
+  text-align: center;
 }
 
 .bar{
@@ -420,3 +415,17 @@ ion-side-menu i {
   -ms-flex-direction: column;
   flex-direction: column;
 }
+
+.vaccin-alert {
+  background: #ffb356;
+  color: #fff;
+}
+
+.vaccin-alert h3 {
+  color: #fff;
+}
+
+/*.store, .store a {
+  background: #333 !important;
+  color: #fff;
+}*/

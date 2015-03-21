@@ -1,5 +1,29 @@
 <ion-view view-title="Vaccins">
   <ion-content padding="true">
-  
+  	<div class="row">
+  		<div class="col vaccin-alert">
+  			<h3><i class="ion-alert-circled"></i> Alerte de vaccin</h3>
+  			<p>Nicole doit se faire vacciner dans 15 jours. Prévoyez dès à présent votre rendez-vous.</p>
+  			<button class="button button-light icon-left ion-ios-information-outline">
+			  <small>Plus d'infos</small>
+			</button>
+			<button class="button button-light icon-left ion-ios-telephone-outline" ng-click="openModal();">
+			  <small>Appeler le médecin</small>
+			</button>
+  		</div>
+  	</div>
+	<div>
+		<header class="module-location">
+			<div class="location-title rating-positive">
+				<h2>Naissance</h2>
+			</div>
+		</header>
+		<ul class="module-history" ng-repeat="item in data | orderBy:'id':true">
+			<li class="rating-negative {{item.type}}">
+				<h3>{{item.value}}</h3>
+				<i></i>
+			</li>
+		</ul>
+	</div>
   </ion-content>
 </ion-view>
