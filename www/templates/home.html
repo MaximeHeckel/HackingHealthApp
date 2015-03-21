@@ -1,38 +1,57 @@
-<ion-view view-title="Bienvenue">
+<ion-view view-title="BB Santé">
   <ion-content>
-
+  	<div class="padding">
   	<div class="row">
-		<div class="dashblock col vaccins">
+		<div class="dashblock col appointment">
 			<div class="pull-left">
-				<i class="icon icon-big ion-alert-circled"></i>
+				<i class="icon icon-big ion-ios-calendar-outline"></i>
+			</div>
+			<div class="pull-right">
+				<i class="icon ion-ios-arrow-right" style="color: #c1c1c1;"></i>
 			</div>
 			<div>
-				<h2>Vaccin Alert</h2>
-				<p>Lorem ipsum sit amet dolor.</p>
+				<h4>RENDEZ-VOUS</h4>
+				<h2>24/03/2015</h2>
+				<p>Avec le Dr Bonpediatre</p>
 			</div>
+
 		</div>
 	</div>
 
 	<div class="row">
 		<a href="#/app/morpho" class="dashblock block col weight">
-			<h5>
-				<b>POIDS</b><br/>
-				<small>mesuré le 15/03/2015</small>
-			</h5>
+			<div class="blockdata">
+				<h4><b>POIDS</b></h4>
+				<h5>mesuré le 15/03/2015</h5>
+			</div>
 			<br/>
 			<h1 class="center">3,55 kg</h1>
 		</a>
 		<a href="#/app/morpho" class="dashblock block col length">
-			<h5>
-				<b>TAILLE</b><br/>
-				<small>mesuré le 20/03/2015</small>
-			</h5>
+			<div class="blockdata">
+				<h4><b>TAILLE</b></h4>
+				<h5>mesuré le 20/03/2015</h5>
+			</div>
 			<br/>
 			<h1 class="center">71 cm</h1>
 		</a>
 	</div>
-    <button class="button" ng-click="add()">Add notification</button>
-    <button class="button" ng-click="isScheduled()">Is Scheduled</button>
 
+	<div class="row">
+		<div class="dashblock col tip">
+			<div>
+				<h4>Conseil du jour</h4>
+				<h1>Sommeil</h1>
+				<p>Pour coucher Lucas, verifiez qu’il soit sur le dos, sur un matelas ferme adapté, dans un lit rigide à barreaux, dans une chambre maintenue entre 19 et 20 degrés celcius.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<div style="text-align:center;">
+		<br/><br/>
+		<img src="./img/icon.jpg" />
+	</div>
+</div>
   </ion-content>
 </ion-view>
