@@ -63,19 +63,19 @@ angular.module('starter.services', [])
     id: 0,
     height: 51,
     weight: 3.500,
-    date: new Date('12','03','2014')
+    date: new Date("October 11, 2014")
   },
   {
     id: 1,
     height: 51.5,
     weight: 3.550,
-    date: new Date('13','03','2014')
+    date: new Date("October 14, 2014")
   },
   {
     id: 2,
     height: 53.5,
     weight: 3.600,
-    date: new Date('13','03','2014')
+    date: new Date("October 15, 2014")
   }
     ];
 

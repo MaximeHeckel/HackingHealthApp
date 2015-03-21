@@ -1,14 +1,36 @@
-<ion-view view-title="Morphologie">
+<ion-view view-title="Croissance">
   <ion-content>
-    <div class="row">
-      <div class="col">
-        <canvas chart="Line" legend="true" options="options" data="chart"></canvas>
-      </div>
+    <div class="button-bar">
+      <a class="button" ng-click="weightSlide()">Poids</a>
+      <a class="button" ng-click="sizeSlide()">Taille</a>
+      <a class="button" ng-click="pcSlide()">Périmètre cranien</a>
     </div>
-    <div class="row">
-      <div class="col-offset-50 col-50">
-        <h4>Mois</h4>
+    <ion-slide-box>
+    <ion-slide>
+        <div class="row">
+          <div class="col">
+            <h4 class="bold-last-element">{{data[data.length-1].weight}}kg <span>{{data[data.length-1].date | date: 'dd/MM/yyyy'}}</h4>
+            <canvas chart="Line" legend="true" options="options" data="chart"></canvas>
+          </div>
+        </div>
+        <h5 class="history-title">HISTORIQUE</h5>
+        <ion-list>
+          <ion-item ng-repeat="item in data | orderBy:'id':true" ng-show="$index > 0">
+            {{item.weight}}kg – <span class="grey-date">{{item.date | date:'dd/MM/yyyy'}}</span>
+          </ion-item>
+        </ion-list>
       </div>
-    </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="box red">
+        Slide 2!
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="box red">
+        Slide 3!
+      </div>
+    </ion-slide>
+  </ion-slide-box>
   </ion-content>
 </ion-view>

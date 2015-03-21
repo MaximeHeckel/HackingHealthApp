@@ -13,8 +13,21 @@ angular.module('starter.controllers', [])
   $scope.data = timelineData.all();
 })
 
-.controller('MorphoCtrl', function($scope, morphoData){
-  console.log(morphoData.all());
+.controller('MorphoCtrl', function($scope, morphoData, $ionicSlideBoxDelegate){
+  $scope.data = morphoData.all();
+
+  $scope.weightSlide = function() {
+    $ionicSlideBoxDelegate.slide(0);
+  }
+
+  $scope.sizeSlide = function() {
+    $ionicSlideBoxDelegate.slide(1);
+  }
+
+  $scope.pcSlide = function() {
+    $ionicSlideBoxDelegate.slide(2);
+  }
+
   var legendData = [];
   for (var i = 0; i <= 36; i += 3) {
     legendData.push(i)
