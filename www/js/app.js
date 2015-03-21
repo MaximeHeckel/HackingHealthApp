@@ -30,29 +30,30 @@ angular.module('starter', ['ionic', 'angles', 'starter.controllers','starter.ser
     controller: 'AppCtrl'
   })
 
-  .state('app.search', {
-    url: "/search",
+  .state('app.home', {
+    url: "/home",
     views: {
       'menuContent': {
-        templateUrl: "templates/search.html"
+        templateUrl: "templates/home.html"
       }
     }
   })
 
-  .state('app.browse', {
-    url: "/browse",
-    views: {
-      'menuContent': {
-        templateUrl: "templates/browse.html"
-      }
-    }
-  })
-    .state('app.playlists', {
-      url: "/playlists",
+    .state('app.nutrition', {
+      url: "/nutrition",
       views: {
         'menuContent': {
-          templateUrl: "templates/playlists.html",
-          controller: 'PlaylistsCtrl'
+          templateUrl: "templates/nutrition.html"
+        }
+      }
+    })
+
+    .state('app.vaccins', {
+      url: "/vaccins",
+      views: {
+        'menuContent': {
+          templateUrl: "templates/vaccins.html",
+          controller: 'VaccinsCtrl'
         }
       }
     })
@@ -75,17 +76,7 @@ angular.module('starter', ['ionic', 'angles', 'starter.controllers','starter.ser
           controller: 'MorphoCtrl'
         }
       }
-    })
-
-  .state('app.single', {
-    url: "/playlists/:playlistId",
-    views: {
-      'menuContent': {
-        templateUrl: "templates/playlist.html",
-        controller: 'PlaylistCtrl'
-      }
-    }
-  });
+    });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/playlists');
+  $urlRouterProvider.otherwise('/app/home');
 });
