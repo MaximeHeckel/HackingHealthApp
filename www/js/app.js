@@ -6,7 +6,7 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', ['ionic', 'angles', 'starter.controllers','starter.services','ngCordova'])
 
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform, $timeout) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -17,6 +17,16 @@ angular.module('starter', ['ionic', 'angles', 'starter.controllers','starter.ser
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
+    window.plugin.notification.local.onadd = function (id, state, json) {
+           var notification = {
+               id: id,
+               state: state,
+               json: json
+           };
+           $timeout(function() {
+               $rootScope.$broadcast("$cordovaLocalNotification:added", notification);
+           });
+       };
   });
 })
 

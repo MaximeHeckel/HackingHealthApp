@@ -39,10 +39,10 @@ angular.module('starter.controllers', [])
         var alarmTime = new Date();
         alarmTime.setMinutes(alarmTime.getMinutes() + 1);
         $cordovaLocalNotification.add({
-            id: "1234",
+            id: "1",
             date: alarmTime,
-            message: "This is a message",
-            title: "This is a title",
+            message: "John doit se faire vacciner dans 15 jours",
+            title: "Alerte Vaccin",
             autoCancel: true,
             sound: null
         }).then(function () {
@@ -51,8 +51,8 @@ angular.module('starter.controllers', [])
     };
 
     $scope.isScheduled = function() {
-        $cordovaLocalNotification.isScheduled("1234").then(function(isScheduled) {
-            alert("Notification 1234 Scheduled: " + isScheduled);
+        $cordovaLocalNotification.isScheduled("1").then(function(isScheduled) {
+            alert("Notification 1 Scheduled: " + isScheduled);
         });
     }
 
