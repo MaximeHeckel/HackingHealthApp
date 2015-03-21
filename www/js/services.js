@@ -128,5 +128,3 @@ angular.module('starter.services', [])
   }
 })
 ;
-
-

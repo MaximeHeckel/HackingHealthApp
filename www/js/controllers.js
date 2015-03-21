@@ -5,11 +5,7 @@ angular.module('starter.controllers', [])
 })
 
 .controller('VaccinsCtrl', function($scope, $ionicModal, vaccinsData){
-
-})
-
-.controller('HomeCtrl', function($scope, $ionicModal, $window, homeData,   $ionicPlatform, $cordovaLocalNotification){
-
+  $scope.data = vaccinsData.all();
   $ionicModal.fromTemplateUrl('templates/modals/alert-doctor.html', {
     scope: $scope,
     animation: 'slide-in-up'
@@ -34,13 +30,9 @@ angular.module('starter.controllers', [])
   $scope.$on('modal.removed', function() {
     // Execute action
   });
-
-  console.log(vaccinsData.all());
-  $scope.data = vaccinsData.all();
-
 })
 
-.controller('HomeCtrl', function($scope, homeData){
+.controller('HomeCtrl', function($scope, $ionicModal, $window, homeData,   $ionicPlatform, $cordovaLocalNotification){
 
   $scope.add = function() {
         var alarmTime = new Date();
@@ -62,7 +54,6 @@ angular.module('starter.controllers', [])
             alert("Notification 1 Scheduled: " + isScheduled);
         });
     }
-
 })
 
 .controller('TimelineCtrl', function($scope, timelineData){
