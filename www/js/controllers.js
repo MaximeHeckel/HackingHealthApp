@@ -4,32 +4,22 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('VaccinsCtrl', function($scope, $ionicModal, vaccinsData){
+.controller('VaccinsCtrl', function($scope, $ionicPopup, vaccinsData){
   $scope.data = vaccinsData.all();
-  $ionicModal.fromTemplateUrl('templates/modals/alert-doctor.html', {
-    scope: $scope,
-    animation: 'slide-in-up'
-  }).then(function(modal) {
-    $scope.modal = modal;
-  });
+  
   $scope.openModal = function() {
-    $scope.modal.show();
+    var alertPopup = $ionicPopup.alert({
+      title: '<b>Alerte de vaccin</b>',
+      template: '<div class="padding">Vous devez prendre rendez-vous pour votre enfant car il a un rappel de vaccin prochainement. Que voulez-vous faire ?</div><div class="list card"><a href="#/home" class="item item-icon-left"><i class="icon ion-ios-telephone-outline"></i>Appeler le pédiatre</a><a href="#/home" class="item item-icon-left"><i class="icon ion-ios-location-outline"></i>Médecins autour de moi</a><a href="#/home" class="item item-icon-left"><i class="icon ion-ios-calendar-outline"></i>Créer un rappel</a></div>',
+      buttons: [
+        {
+          text: 'Fermer',
+          type: 'button-clear button-positive'
+        }
+      ]
+    });
   };
-  $scope.closeModal = function() {
-    $scope.modal.hide();
-  };
-  //Cleanup the modal when we're done with it!
-  $scope.$on('$destroy', function() {
-    $scope.modal.remove();
-  });
-  // Execute action on hide modal
-  $scope.$on('modal.hidden', function() {
-    // Execute action
-  });
-  // Execute action on remove modal
-  $scope.$on('modal.removed', function() {
-    // Execute action
-  });
+
 })
 
 .controller('HomeCtrl', function($scope, $ionicModal, $window, homeData,   $ionicPlatform, $cordovaLocalNotification){
@@ -153,8 +143,14 @@ angular.module('starter.controllers', [])
 
     setTimeout(function() {
       var alertPopup = $ionicPopup.alert({
-        title: 'Attention !',
-        template: 'The weight value is outside the average rage and may affect the health of your baby.<br /> Please visit a doctor! <div class="list card"><a href="#/home" class="item item-icon-left"><i class="icon ion-ios-telephone"></i>Appeler le pédiatre</a><a href="#/home" class="item item-icon-left"><i class="icon ion-location"></i>Médecins autour de moi</a><a href="#/home" class="item item-icon-left"><i class="icon ion-calendar"></i>Créer un rappel</a></div>'
+        title: '<b>Attention !</b>',
+        template: '<div class="padding">Le poids de votre enfant est en dehors des valeurs moyennes. Cela peut être dû à un problème de santé.<br /> Prenez rendez-vous dès à présent avec un médecin.</div><div class="list card"><a href="#/home" class="item item-icon-left"><i class="icon ion-ios-telephone-outline"></i>Appeler le pédiatre</a><a href="#/home" class="item item-icon-left"><i class="icon ion-ios-location-outline"></i>Médecins autour de moi</a><a href="#/home" class="item item-icon-left"><i class="icon ion-ios-calendar-outline"></i>Créer un rappel</a></div>',
+        buttons: [
+          {
+            text: 'Fermer',
+            type: 'button-clear button-positive'
+          }
+        ]
       });
       alertPopup.then(function(res) {
         console.log('HHCamp Rocks !');
