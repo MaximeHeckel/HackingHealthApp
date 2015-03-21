@@ -57,6 +57,16 @@ angular.module('starter', ['ionic', 'angles', 'starter.controllers','starter.ser
       }
     })
 
+    .state('app.timeline', {
+      url: "/timeline",
+      views: {
+        'menuContent': {
+          templateUrl: "templates/timeline.html",
+          controller: 'TimelineCtrl'
+        }
+      }
+    })
+
     .state('app.morpho', {
       url: "/morpho",
       views: {
