@@ -4,6 +4,10 @@ angular.module('starter.controllers', [])
 
 })
 
+.controller('TimelineCtrl', function($scope, timelineData){
+
+})
+
 .controller('MorphoCtrl', function($scope, morphoData){
   console.log(morphoData.all());
 })
