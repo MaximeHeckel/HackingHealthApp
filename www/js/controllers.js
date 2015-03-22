@@ -162,7 +162,7 @@ angular.module('starter.controllers', [])
       alertPopup.then(function(res) {
         console.log('HHCamp Rocks !');
       });
-    }, 2000);
+    }, 2500);
   };
 })
 
@@ -179,4 +179,3 @@ angular.module('starter.controllers', [])
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
 });
-
