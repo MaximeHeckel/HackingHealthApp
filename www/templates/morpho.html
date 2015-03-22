@@ -9,7 +9,7 @@
     <ion-slide>
         <div class="row">
           <div class="col">
-            <h4 class="bold-last-element">{{data[data.length-1].weight}} kg <span>mesuré le {{data[data.length-1].date | date: 'dd/MM/yyyy'}}</h4>
+            <h4 class="bold-last-element">{{data[data.length-1].weight}} kg <span>mesuré le {{data[data.length-1].date | date: 'dd/MM/yyyy'}}</span></h4>
             <canvas chart="Line" legend="true" options="options" data="chart"></canvas>
           </div>
         </div>

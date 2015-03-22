@@ -316,46 +316,91 @@ ion-side-menu i {
   position: relative;
 }
 
-.dashblock.vaccins {
-  background: #fff5cf;
-  color: #ffb356;
+.dashblock.appointment {
+  background: #ededed;
+  color: #b2b2b4;
+  border-bottom: 1px solid #529ad6;
 }
 
-.dashblock.vaccins h2 {
-  color: #ffb356;
+.dashblock.appointment h2 {
+  color: #4b4b4b;
   margin: 0 0;
 }
 
-.dashblock.weight {
-  margin-top: 20px;
-  background: #d1eeec;
-  margin: 15px 5px;
+.dashblock.appointment h4 {
+  color: #b2b2b2;
 }
 
-.dashblock.weight h1,.dashblock.weight h5 {
+.dashblock .icon {
+  color: #599ed7;
+}
+
+.dashblock.weight {
+  background: #d1eeec;
+  margin: 16px 7px 16px 0;
+  border: 1px solid #a2e5e0;
+}
+
+.dashblock.weight h1,.dashblock.weight h4,.dashblock.weight h5 {
   color: #1bada2;
 }
+.dashblock h4 {
+  font-size: 14px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
 .dashblock h5 {
-  position: absolute;
-  top:10px;
-  right:10px;
-  margin-top: 0;
-  text-align: right;
+  font-size: 12px;
+  margin: 0;
+}
+
+.dashblock.weight h1, .dashblock.length h1 {
+  margin-bottom: 30px;
 }
 
 .dashblock.length {
-  margin-top: 20px;
   background: #efdeef;
-  margin: 15px 5px;
+  margin: 16px 0 16px 7px;
+  border: 1px solid #e8b2e8;
 }
 
-.dashblock.length h1, .dashblock.length h5 {
+.dashblock.length h1, .dashblock.length h4, .dashblock.length h5 {
   color: #b35cb3;
 }
 
 .dashblock.chart {
   border: 1px solid #a3ae3a;
   background: #ededed;
+}
+
+.dashblock.tip {
+  background: #fff5cf;
+  border: 1px solid #ddcf9d;
+  color: #7e6916;
+  position: relative;
+}
+
+.dashblock.tip::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  border-width: 0 17px 17px 0;
+  border-style: solid;
+  border-color: #bcac6e #fff;
+}
+
+.dashblock.tip h1, .dashblock h4 {
+  margin-top: 0;
+  color: #7e6916;
+}
+
+.dashblock .blockdata {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  text-align: right;
 }
 
 .center {
@@ -369,6 +414,15 @@ ion-side-menu i {
 .pull-left {
   float: left;
   margin-right: 20px;
+  height: 50px;
+  /* vertical-align: middle; */
+  margin-top: 9px;
+}
+
+.pull-right {
+  float: right;
+  font-size: 45px;
+  margin-top: 20px;
 }
 
 .button-float {
