@@ -46,7 +46,7 @@ angular.module('starter.controllers', [])
         $cordovaLocalNotification.add({
             id: "1",
             date: alarmTime,
-            message: " Lucas doit se faire vacciner dans 15 jours",
+            message: "Lucas doit se faire vacciner dans 15 jours",
             title: "Alerte Vaccin",
             autoCancel: true,
             sound: null

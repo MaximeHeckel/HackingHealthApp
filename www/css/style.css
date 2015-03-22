@@ -285,6 +285,10 @@ h5.history-title{
   font-weight: 500;
 }
 
+input.big-input{
+  font-size: 20px;
+}
+
 /*IONIC EDIT*/
 
 .row{
