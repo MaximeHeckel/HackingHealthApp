@@ -4,6 +4,10 @@ angular.module('starter.controllers', [])
 
 })
 
+.controller('StoreCtrl', function($scope) {
+
+})
+
 .controller('VaccinsCtrl', function($scope, $ionicPopup, vaccinsData){
   $scope.data = vaccinsData.all();
 
@@ -175,3 +179,4 @@ angular.module('starter.controllers', [])
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
 });
+
