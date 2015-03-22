@@ -18,11 +18,13 @@
 				<h2>Naissance</h2>
 			</div>
 		</header>
-		<ul class="module-history" ng-repeat="item in data | orderBy:'id':true">
-			<li class="rating-negative {{item.type}}">
+    <span class="today-bar"></span>
+		<ul class="module-history" ng-repeat="item in data | orderBy:'id':false">
+			<li ng-if="item.type != 'bar'" class="rating-negative {{item.type}}">
 				<h3>{{item.value}}</h3>
 				<i></i>
 			</li>
+      <span ng-if="item.type == 'bar'" class="month-bar">{{item.value}}</span>
 		</ul>
 	</div>
   </ion-content>
