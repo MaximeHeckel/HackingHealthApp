@@ -87,6 +87,16 @@ angular.module('starter', ['ionic', 'angles', 'starter.controllers','starter.ser
           controller: 'MorphoCtrl'
         }
       }
+    })
+
+    .state('app.store', {
+      url: "/store",
+      views: {
+        'menuContent': {
+          templateUrl: "templates/store.html",
+          controller: 'StoreCtrl'
+        }
+      }
     });
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/home');
