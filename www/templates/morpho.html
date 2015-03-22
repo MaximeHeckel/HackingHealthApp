@@ -4,7 +4,7 @@
   </ion-nav-buttons>
   <ion-content>
     <div class="button-bar">
-      <a class="button" ng-click="weightSlide()">Poids</a>
+      <a class="button active-button" ng-click="weightSlide()">Poids</a>
       <a class="button" ng-click="sizeSlide()">Taille</a>
       <a class="button" ng-click="pcSlide()">P. Cranien</a>
     </div>
@@ -12,7 +12,7 @@
     <ion-slide>
         <div class="row">
           <div class="col">
-            <h4 class="bold-last-element">{{data[data.length-1].weight}} kg <span>mesuré le {{data[data.length-1].date | date: 'dd-MM-yyyy'}}</span></h4>
+            <h4 class="bold-last-element"><span class="weight-display">{{data[data.length-1].weight}} kg</span> <span>mesuré le {{data[data.length-1].date | date: 'dd-MM-yyyy'}}</span></h4>
             <canvas chart="Line" legend="true" options="options" data="chart"></canvas>
           </div>
         </div>
