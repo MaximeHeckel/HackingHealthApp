@@ -10,6 +10,12 @@ angular.module('starter.controllers', [])
 
 .controller('VaccinsCtrl', function($scope, $ionicPopup, vaccinsData){
   $scope.data = vaccinsData.all();
+  $scope.closeAlert = false;
+
+  $scope.action = function() {
+    $closeAlert = true;
+    $scope.$apply();
+  };
 
   $scope.openModal = function() {
     var alertPopup = $ionicPopup.alert({
