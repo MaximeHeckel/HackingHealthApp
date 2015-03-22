@@ -4,6 +4,10 @@ angular.module('starter.controllers', [])
 
 })
 
+.controller('StoreCtrl', function($scope) {
+
+})
+
 .controller('VaccinsCtrl', function($scope, $ionicPopup, vaccinsData){
   $scope.data = vaccinsData.all();
 
@@ -53,7 +57,10 @@ angular.module('starter.controllers', [])
 
 .controller('MorphoCtrl', function($scope, morphoData, $ionicSlideBoxDelegate, $ionicModal, $ionicPopup){
   $scope.data = morphoData.all();
-  $scope.dataWeight = {};
+  $scope.dataWeight = {
+    weight: null,
+    date: new Date()
+  };
 
   $scope.weightSlide = function() {
     $ionicSlideBoxDelegate.slide(0);
@@ -172,3 +179,4 @@ angular.module('starter.controllers', [])
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
 });
+
