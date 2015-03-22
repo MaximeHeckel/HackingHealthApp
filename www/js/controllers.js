@@ -10,6 +10,12 @@ angular.module('starter.controllers', [])
 
 .controller('VaccinsCtrl', function($scope, $ionicPopup, vaccinsData){
   $scope.data = vaccinsData.all();
+  $scope.closeAlert = false;
+
+  $scope.action = function() {
+    $closeAlert = true;
+    $scope.$apply();
+  };
 
   $scope.openModal = function() {
     var alertPopup = $ionicPopup.alert({
@@ -26,11 +32,17 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('HomeCtrl', function($scope, $ionicModal, $window, homeData,   $ionicPlatform, $cordovaLocalNotification){
+.controller('HomeCtrl', function($scope, $ionicModal, $window, homeData, $state, $ionicPlatform, $cordovaLocalNotification){
+
+  $scope.$on('$ionicView.loaded', function() {
+    ionic.Platform.ready( function() {
+      if(navigator && navigator.splashscreen) navigator.splashscreen.hide();
+    });
+  });
 
   $scope.add = function() {
         var alarmTime = new Date();
-        alarmTime.setMinutes(alarmTime.getMinutes() + 1);
+        alarmTime.setSeconds(alarmTime.getSeconds() + 15);
         $cordovaLocalNotification.add({
             id: "1",
             date: alarmTime,
@@ -40,6 +52,7 @@ angular.module('starter.controllers', [])
             sound: null
         }).then(function () {
             console.log("The notification has been set");
+            setTimeout(function(){ $state.go('app.vaccins') }, 3000);
         });
     };
 

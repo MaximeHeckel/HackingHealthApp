@@ -3,21 +3,19 @@
 	    <img src="./img/baby.jpg" width="32" height="32" />
 	</ion-nav-buttons>
   <ion-content>
-  	<div class="row padding">
-  		<div class="col vaccin-alert">
-
+  	<div class="row padding" >
+  		<div class="col vaccin-alert" ng-show="!closeAlert">
   			<h3><i class="ion-alert-circled"></i> Alerte de vaccin</h3>
   			<i class="icon ion-ios-close-empty" style="position:absolute;color:#c17e2b;font-size:35px;top:10px;right:15px;"></i>
   			<p>Lucas doit se faire vacciner dans 15 jours. Prévoyez dès à présent votre rendez-vous.</p>
   			<button class="button button-light icon-left ion-ios-information-outline" style="padding:0 8px;">
-			  <small>Plus d'infos</small>
-			</button>
-			<button class="button button-light icon-left ion-ios-telephone-outline" ng-click="openModal();" style="padding:0 8px;">
-			  <small>Appeler le médecin</small>
-			</button>
+			    <small>Plus d'infos</small>
+			  </button>
+			  <button class="button button-light icon-left ion-ios-telephone-outline" ng-click="openModal();" style="padding:0 8px;">
+			    <small>Appeler le médecin</small>
+			  </button>
   		</div>
   	</div>
-	<div>
 		<header class="module-location">
 			<div class="location-title rating-positive">
 				<h2>Naissance</h2>

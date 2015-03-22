@@ -20,6 +20,7 @@
     "org.apache.cordova.dialogs",
     "org.apache.cordova.file",
     "org.apache.cordova.media",
-    "de.appplant.cordova.plugin.local-notification"
+    "de.appplant.cordova.plugin.local-notification",
+    "org.apache.cordova.splashscreen"
   ]
 }
