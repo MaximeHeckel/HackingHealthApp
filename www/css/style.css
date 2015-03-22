@@ -306,6 +306,8 @@ h5.history-title{
 
 ion-side-menu i {
   margin-right: 15px;
+  font-size: 23px;
+  vertical-align: middle;
 }
 
 .dashblock {
@@ -496,10 +498,10 @@ ion-side-menu i {
 .month-name {
   padding: 0 20px;
   background: #fff;
-  width: 120px;
+  width: 125px;
   margin: -10px auto 0 auto;
   text-align: center;
-  color: #dcdcdc;
+  color: #BFBFBF;
   font-weight: bold;
 }
 
