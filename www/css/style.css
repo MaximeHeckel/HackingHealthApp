@@ -483,14 +483,36 @@ ion-side-menu i {
   border-bottom: 2px solid #00a1de;
   position: absolute;
   display: block;
-  top: 317px;
+  top: 311px;
   width: 100%;
 }
 
 .month-bar {
-  display: block;
   text-align: center;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #dcdcdc;
+    margin-top: 15px;
+}
+
+.month-name {
+  padding: 0 20px;
+  background: #fff;
+  width: 120px;
+  margin: -10px auto 0 auto;
+  text-align: center;
+  color: #dcdcdc;
+  font-weight: bold;
+}
+
+.month-bar::before {
+  content: '';
+  display: block;
+  height: 40px;
+  left: 28px;
+  position: absolute;
+  width: 5px;
+  margin-top: -35px;
+  z-index: -1;
+  background-image: linear-gradient(#979797, #979797);
 }
 
 /*.store, .store a {

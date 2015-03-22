@@ -1,6 +1,6 @@
 <ion-view view-title="Vaccins">
-  <ion-content padding="true">
-  	<div class="row">
+  <ion-content>
+  	<div class="row padding">
   		<div class="col vaccin-alert">
   			<h3><i class="ion-alert-circled"></i> Alerte de vaccin</h3>
   			<p>Nicole doit se faire vacciner dans 15 jours. Prévoyez dès à présent votre rendez-vous.</p>
@@ -24,7 +24,8 @@
 				<h3>{{item.value}}</h3>
 				<i></i>
 			</li>
-      <span ng-if="item.type == 'bar'" class="month-bar">{{item.value}}</span>
+      <div ng-if="item.type == 'bar'"><div class="month-bar"></div><div class="month-name">{{item.value}}</div></div>
+
 		</ul>
 	</div>
   </ion-content>
