@@ -20,7 +20,7 @@ angular.module('starter.controllers', [])
   $scope.openModal = function() {
     var alertPopup = $ionicPopup.alert({
       title: '<b>Alerte de vaccin</b>',
-      template: '<div class="padding">Vous devez prendre rendez-vous pour votre enfant car il a un rappel de vaccin prochainement. Que voulez-vous faire ?</div><div class="list card"><a href="#/home" class="item item-icon-left"><i class="icon ion-ios-telephone-outline"></i>Appeler le pédiatre</a><a href="#/home" class="item item-icon-left"><i class="icon ion-ios-location-outline"></i>Médecins autour de moi</a><a href="#/home" class="item item-icon-left"><i class="icon ion-ios-calendar-outline"></i>Créer un rappel</a></div>',
+      template: '<div class="padding">Vous devez prendre rendez-vous pour votre enfant car il a un rappel de vaccin prochainement. Que voulez-vous faire&nbsp;?</div><div class="list card"><a href="#/home" class="item item-icon-left"><i class="icon ion-ios-telephone-outline"></i>Appeler le pédiatre</a><a href="#/home" class="item item-icon-left"><i class="icon ion-ios-location-outline"></i>Médecins autour de moi</a><a href="#/home" class="item item-icon-left"><i class="icon ion-ios-calendar-outline"></i>Créer un rappel</a></div>',
       buttons: [
         {
           text: 'Fermer',
