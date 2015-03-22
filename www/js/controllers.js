@@ -10,7 +10,7 @@ angular.module('starter.controllers', [])
 
 .controller('VaccinsCtrl', function($scope, $ionicPopup, vaccinsData){
   $scope.data = vaccinsData.all();
-  
+
   $scope.openModal = function() {
     var alertPopup = $ionicPopup.alert({
       title: '<b>Alerte de vaccin</b>',
@@ -34,7 +34,7 @@ angular.module('starter.controllers', [])
         $cordovaLocalNotification.add({
             id: "1",
             date: alarmTime,
-            message: " Nicole doit se faire vacciner dans 15 jours",
+            message: " Lucas doit se faire vacciner dans 15 jours",
             title: "Alerte Vaccin",
             autoCancel: true,
             sound: null
@@ -57,7 +57,10 @@ angular.module('starter.controllers', [])
 
 .controller('MorphoCtrl', function($scope, morphoData, $ionicSlideBoxDelegate, $ionicModal, $ionicPopup){
   $scope.data = morphoData.all();
-  $scope.dataWeight = {};
+  $scope.dataWeight = {
+    weight: null,
+    date: new Date()
+  };
 
   $scope.weightSlide = function() {
     $ionicSlideBoxDelegate.slide(0);
