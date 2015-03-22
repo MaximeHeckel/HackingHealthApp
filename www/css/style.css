@@ -359,6 +359,7 @@ ion-side-menu i {
 
 .dashblock.weight h1, .dashblock.length h1 {
   margin-bottom: 30px;
+  font-size: 31px;
 }
 
 .dashblock.length {
