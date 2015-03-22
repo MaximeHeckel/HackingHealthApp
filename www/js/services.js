@@ -184,19 +184,19 @@ angular.module('starter.services', [])
     id: 0,
     height: 51,
     weight: '3,43',
-    date: new Date("October 11, 2014")
+    date: new Date("March 19, 2015")
   },
   {
     id: 1,
     height: 51.5,
     weight: '3,51',
-    date: new Date("October 14, 2014")
+    date: new Date("March 20, 2014")
   },
   {
     id: 2,
     height: 53.5,
     weight: '3,55',
-    date: new Date("October 15, 2014")
+    date: new Date("March 21, 2014")
   }
     ];
 
