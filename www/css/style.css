@@ -1,6 +1,5 @@
 .module-location {
   background-color: transparent;
-  border-bottom: 2px solid #00a1de;
   height: 100px;
   position: relative;
 }
@@ -478,6 +477,20 @@ ion-side-menu i {
 
 .vaccin-alert h3 {
   color: #fff;
+}
+
+.today-bar {
+  border-bottom: 2px solid #00a1de;
+  position: absolute;
+  display: block;
+  top: 317px;
+  width: 100%;
+}
+
+.month-bar {
+  display: block;
+  text-align: center;
+  border-bottom: 1px solid black;
 }
 
 /*.store, .store a {

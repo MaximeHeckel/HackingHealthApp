@@ -3,13 +3,17 @@ angular.module('starter.services', [])
 .factory('vaccinsData', function(){
   var vaccinsData = [
     {
-      id: 5,
+      id: 0,
       type: 'ok',
       value: 'BCG',
-      date: new Date("October 14, 2014")
     },
     {
-      id: 4,
+      id: 1,
+      type: 'bar',
+      value: '2 mois'
+    },
+    {
+      id: 2,
       type: 'todo',
       value: 'Diphtérie-Tétanos-Poliomyélite'
     },
@@ -19,19 +23,104 @@ angular.module('starter.services', [])
       value: 'Coqueluche'
     },
     {
-      id: 2,
+      id: 4,
       type: 'todo',
       value: 'Haemophilus Influenza de type b (HIB)'
     },
     {
-      id: 1,
+      id: 5,
+      type: 'todo',
+      value: 'Hépatite B'
+    },
+    {
+      id: 6,
+      type: 'todo',
+      value: 'Pneumocoque C'
+    },
+    {
+      id: 7,
+      type: 'bar',
+      value: '4 mois'
+    },
+    {
+      id: 8,
+      type: 'later',
+      value: 'Diphtérie-Tétanos-Poliomyélite'
+    },
+    {
+      id: 9,
+      type: 'later',
+      value: 'Coqueluche'
+    },
+    {
+      id: 10,
+      type: 'later',
+      value: 'Haemophilus Influenza de type b (HIB)'
+    },
+    {
+      id: 11,
       type: 'later',
       value: 'Hépatite B'
     },
     {
-      id: 0,
+      id: 12,
       type: 'later',
       value: 'Pneumocoque C'
+    },
+    {
+      id: 13,
+      type: 'bar',
+      value: '11 mois'
+    },
+    {
+      id: 14,
+      type: 'later',
+      value: 'Diphtérie-Tétanos-Poliomyélite'
+    },
+    {
+      id: 15,
+      type: 'later',
+      value: 'Coqueluche'
+    },
+    {
+      id: 16,
+      type: 'later',
+      value: 'Haemophilus Influenza de type b (HIB)'
+    },
+    {
+      id: 17,
+      type: 'later',
+      value: 'Hépatite B'
+    },
+    {
+      id: 18,
+      type: 'later',
+      value: 'Pneumocoque C'
+    },
+    {
+      id: 19,
+      type: 'bar',
+      value: '12 mois'
+    },
+    {
+      id: 20,
+      type: 'later',
+      value: 'Méningocoque C'
+    },
+    {
+      id: 21,
+      type: 'bar',
+      value: '16 - 18 mois'
+    },
+    {
+      id: 22,
+      type: 'later',
+      value: 'Méningocoque C'
+    },
+    {
+      id: 23,
+      type: 'later',
+      value: 'Rougeole - Oreillons - Rubéole'
     },
   ];
 
